@@ -1,0 +1,22 @@
+function superpixel(A)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% creator: Santosh 
+% input: im = binary_image 
+% just a demo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Input image
+A = imread('kobi.png');
+[L,N] = superpixels(A,500);
+
+
+
+%% plot usingim
+figure
+BW = boundarymask(L);
+imshow(imoverlay(A,BW,'cyan'),'InitialMagnification',67)
+
+
+end
+
+
